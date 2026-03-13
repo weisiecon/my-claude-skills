@@ -123,7 +123,85 @@ Stata 16 ships with full PDF documentation at `/mnt/c/Program Files/Stata16/docs
 | `gsm.pdf` | Getting Started with Stata for Mac |
 | `stoc.pdf` | Stochastic frontier models |
 
-To read a manual: `"/mnt/c/Program Files/Stata16/docs/u.pdf"` (open with a PDF reader or use the `/split-pdf` skill).
+**WARNING:** These PDFs total 382MB. Never read an entire manual into context. Use the lookup strategies below.
+
+### Efficient documentation lookup
+
+The Stata manuals are large PDFs (up to 30MB each). Use these tools to extract only the relevant pages or passages without consuming excessive tokens.
+
+#### Tool installation (one-time setup)
+
+```bash
+# pdfgrep: fast regex search across PDF text
+sudo apt install -y pdfgrep
+
+# pdfplumber: Python PDF text extraction with page-level control
+uv tool install pdfplumber
+# or: uv pip install pdfplumber (if using a venv)
+```
+
+#### Strategy 1: pdfgrep (fastest, for keyword lookup)
+
+Use `pdfgrep` when you need to find which pages discuss a specific command, option, or topic. It searches PDF text directly without full extraction.
+
+```bash
+DOCS="/mnt/c/Program Files/Stata16/docs"
+
+# Search a specific manual for a command (with page numbers)
+pdfgrep -n -i "reghdfe" "$DOCS/r.pdf"
+
+# Search across ALL manuals at once
+pdfgrep -n -i "hausman" "$DOCS"/*.pdf
+
+# Show context around matches (3 lines before/after)
+pdfgrep -n -i -C 3 "xtset" "$DOCS/xt.pdf"
+
+# Count matches per file (useful to find the right manual)
+pdfgrep -c -i "bootstrap" "$DOCS"/*.pdf | grep -v ":0$"
+```
+
+Use this as the **first step** to identify the right manual and page range, then extract those pages with pdfplumber.
+
+#### Strategy 2: pdfplumber (targeted page extraction)
+
+Use `pdfplumber` when you know which pages to read. Extract text from specific pages only.
+
+```python
+import pdfplumber
+
+docs = "/mnt/c/Program Files/Stata16/docs"
+
+# Extract text from specific pages (0-indexed)
+with pdfplumber.open(f"{docs}/r.pdf") as pdf:
+    for page_num in [42, 43, 44]:
+        page = pdf.pages[page_num]
+        print(f"--- Page {page_num + 1} ---")
+        print(page.extract_text())
+```
+
+Run via: `uv run python script.py`
+
+Or as a one-liner:
+
+```bash
+uv run python -c "
+import pdfplumber
+with pdfplumber.open('/mnt/c/Program Files/Stata16/docs/r.pdf') as pdf:
+    for p in pdf.pages[42:45]:
+        print(p.extract_text())
+"
+```
+
+#### Strategy 3: Read tool (small page ranges only)
+
+The built-in Read tool can display PDF pages directly, but **limit to 5 pages at a time** to avoid context window bloat. Use after identifying the right page range with pdfgrep.
+
+#### Recommended workflow
+
+1. **Identify the manual:** Use the table above to pick the right PDF by topic.
+2. **Search for the term:** `pdfgrep -n -i "command_name" "$DOCS/manual.pdf"` to find page numbers.
+3. **Extract relevant pages:** Use pdfplumber or the Read tool for only those pages (max ~5 pages per extraction).
+4. **Never read full manuals.** Even the smallest are hundreds of pages.
 
 ## Conventions (from user preferences)
 
