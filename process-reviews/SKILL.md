@@ -207,6 +207,7 @@ Located in `templates/referee-comments/`:
 
 ## Cross-References
 
+- `/respond-to-referees` — **downstream:** compose the response letter from the tracking files generated here
 - `/proofread` — for proofreading the response letter before submission
 - `/bib-validate` — run after revision to check bibliography
 - `/pre-submission-report` — full quality check before resubmission

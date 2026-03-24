@@ -1,0 +1,179 @@
+% Response Letter to Referee Comments
+% Compile with: latexmk -pdf response-letter.tex
+%
+% Two-font design:
+%   - Referee comments: sans-serif (Helvetica), grey background
+%   - Author responses: serif (Times), regular text
+
+\documentclass[11pt]{article}
+
+% ----- Fonts -----
+\usepackage{mathptmx}       % Times for body text (serif)
+\usepackage[scaled=0.92]{helvet}  % Helvetica for sans-serif
+\usepackage[T1]{fontenc}
+
+% ----- Layout -----
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+% ----- Packages -----
+\usepackage[dvipsnames]{xcolor}
+\usepackage{mdframed}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{natbib}
+
+% ----- Custom colours -----
+\definecolor{commentbg}{gray}{0.93}
+\definecolor{commentborder}{gray}{0.75}
+
+% ----- Referee comment environment -----
+% Sans-serif text on grey background
+\newenvironment{refcomment}{%
+  \begin{mdframed}[
+    backgroundcolor=commentbg,
+    linecolor=commentborder,
+    linewidth=0.5pt,
+    innertopmargin=8pt,
+    innerbottommargin=8pt,
+    innerleftmargin=10pt,
+    innerrightmargin=10pt,
+    skipabove=10pt,
+    skipbelow=6pt
+  ]%
+  \sffamily\small%
+}{%
+  \end{mdframed}%
+}
+
+% ----- Response environment -----
+% Serif text, normal formatting
+\newenvironment{response}{%
+  \par\noindent\textbf{Response:}\quad\ignorespaces%
+}{%
+  \par\vspace{6pt}%
+}
+
+% ----- Manuscript reference command -----
+\newcommand{\manuscriptref}[2]{%
+  \par\noindent\textit{See Section~#1, page~#2 of the revised manuscript.}%
+}
+
+% ----- Reviewer section command -----
+\newcommand{\reviewersection}[1]{%
+  \clearpage%
+  \section*{Response to Reviewer #1}%
+  \addcontentsline{toc}{section}{Response to Reviewer #1}%
+}
+
+% ----- Comment heading command -----
+\newcommand{\commentheading}[1]{%
+  \subsection*{Comment #1}%
+}
+
+% =================================================================
+\begin{document}
+
+% ----- Title block -----
+\begin{center}
+  {\Large\bfseries Response to Referee Comments}\\[12pt]
+  {\large PAPER TITLE}\\[6pt]
+  {Author 1, Author 2, Author 3}\\[6pt]
+  {\itshape Journal Name --- Round N}\\[4pt]
+  {\today}
+\end{center}
+
+\vspace{12pt}
+\hrule
+\vspace{18pt}
+
+% =================================================================
+% COVER LETTER TO EDITOR
+% =================================================================
+
+\section*{Cover Letter to the Editor}
+
+Dear Professor [Editor Name],
+
+Thank you for the opportunity to revise our manuscript entitled ``[Paper Title]'' (Manuscript No. [Number]).  We are grateful to you and the reviewers for the constructive and detailed comments, which have helped us improve the paper substantially.
+
+Below, we summarise the major changes and then provide point-by-point responses to each reviewer's comments. Reviewer comments are reproduced in shaded boxes; our responses follow in regular text.
+
+\textbf{Summary of major changes:}
+
+\begin{enumerate}[leftmargin=*]
+  \item [Major change 1: brief description and location]
+  \item [Major change 2: brief description and location]
+  \item [Major change 3: brief description and location]
+\end{enumerate}
+
+We hope the revised manuscript addresses all concerns satisfactorily. We look forward to your decision.
+
+\vspace{12pt}
+\noindent Sincerely,
+
+\noindent{[Corresponding Author Name]}
+
+% =================================================================
+% RESPONSES TO REVIEWER 1
+% =================================================================
+
+\reviewersection{1}
+
+We thank Reviewer 1 for the careful reading and constructive suggestions.
+
+% --- Comment R1-C1 ---
+\commentheading{R1-C1}
+
+\begin{refcomment}
+[Paste or paraphrase the reviewer's comment here, verbatim.]
+\end{refcomment}
+
+\begin{response}
+[Your response here. Reference specific manuscript locations.]
+\end{response}
+
+\manuscriptref{3.2}{7}
+
+% --- Comment R1-C2 ---
+\commentheading{R1-C2}
+
+\begin{refcomment}
+[Reviewer's comment.]
+\end{refcomment}
+
+\begin{response}
+[Your response.]
+\end{response}
+
+% =================================================================
+% RESPONSES TO REVIEWER 2
+% =================================================================
+
+\reviewersection{2}
+
+We appreciate the thorough and insightful comments from Reviewer 2.
+
+% --- Comment R2-C1 ---
+\commentheading{R2-C1}
+
+\begin{refcomment}
+[Reviewer's comment.]
+\end{refcomment}
+
+\begin{response}
+[Your response.]
+\end{response}
+
+% =================================================================
+% BIBLIOGRAPHY (if new references are cited in responses)
+% =================================================================
+
+% Uncomment if you cite new references in the response letter:
+% \bibliographystyle{apalike}
+% \bibliography{references}
+
+\end{document}

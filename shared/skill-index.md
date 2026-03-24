@@ -51,7 +51,7 @@
 | `bib-parse` | Extract citations from a PDF and generate a validated `.bib` file |
 | `latex-scaffold` | Convert Markdown draft into buildable LaTeX project (md→tex) |
 
-### Submission (5)
+### Submission (6)
 
 | Skill | Purpose |
 |-------|---------|
@@ -60,6 +60,7 @@
 | `process-reviews` | Referee comments PDF into tracking files |
 | `synthesise-reviews` | Synthesise parallel review reports into a prioritised revision plan |
 | `brief-compliance-check` | Check LaTeX submission against assessment brief (deliverables, word limits, required files) |
+| `respond-to-referees` | Compose professional response letters to referee and editor comments |
 
 ### Project Setup & Session (15)
 
@@ -145,4 +146,4 @@
 
 ---
 
-**Total: 87 skills across 11 categories.**
+**Total: 88 skills across 11 categories.**
