@@ -127,16 +127,13 @@ Three compilation skills exist for different scopes. Use this decision tree:
 Need to compile LaTeX?
 ├── Single project, want auto error resolution?
 │   └── /latex-autofix  (default — 5 iterations, citation audit, quality score)
-├── Single project, need manual control or config reference?
-│   └── /latex  (this skill — .latexmkrc setup, engine selection, VS Code config)
-└── Multiple projects / fleet-wide health check?
-    └── /latex-health-check  (project discovery, 3 iterations per project, cross-project checks)
+└── Single project, need manual control or config reference?
+    └── /latex  (this skill — .latexmkrc setup, engine selection, VS Code config)
 ```
 
 | Skill | Scope | Iterations | Extra features |
 |-------|-------|------------|----------------|
 | `/latex` | Single project | Manual | Config reference, engine auto-detection, VS Code integration |
 | `/latex-autofix` | Single project | Up to 5 | Auto error fix, citation audit, quality score |
-| `/latex-health-check` | All projects | Up to 3 each | Project discovery, symlink integrity, Overleaf separation, template drift |
 
-**Rule of thumb:** Use `/latex-autofix` by default. Use `/latex` when you need to understand or configure the build system. Use `/latex-health-check` for periodic maintenance.
+**Rule of thumb:** Use `/latex-autofix` by default. Use `/latex` when you need to understand or configure the build system.

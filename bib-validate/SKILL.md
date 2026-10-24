@@ -26,7 +26,7 @@ argument-hint: [project-path or tex-file]
 
 ## Phase 0: Session Log (Suggested)
 
-Bibliography validation with preprint staleness checks can be context-heavy (OpenAlex lookups, web searches for published versions). Before starting, **suggest** running `/session-log` to capture prior work as a recovery checkpoint. If the user declines, proceed without it.
+Bibliography validation with preprint staleness checks can be context-heavy (OpenAlex lookups, web searches for published versions). If the conversation is already long, **suggest** that the user run `/compact` before starting. If the user declines, proceed without it.
 
 ## Convention
 

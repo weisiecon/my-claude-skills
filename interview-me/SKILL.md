@@ -76,7 +76,7 @@ Ask 2–3 targeted questions:
 - "Which seminal papers would a reviewer in this subfield expect to see cited?"
 - "What's the typical identification strategy in this subfield — and what do reviewers most often attack?"
 
-After the interview, populate `.context/field-calibration.md` from answers combined with Research Spec content. Use the template at `skills/init-project-research/templates/field-calibration.md`.
+After the interview, populate `.context/field-calibration.md` from answers combined with Research Spec content. Use the template at `references/field-calibration.md` in this skill's folder.
 
 If field-calibration already exists with content: ask the user whether to update specific sections or keep as-is.
 
@@ -151,7 +151,5 @@ Once you have enough information (typically 5–8 exchanges), produce a **Resear
 
 | Skill | When to use instead/alongside |
 |-------|-------------------------------|
-| `/scout generate` | When you have a topic but no specific idea yet — generates multiple RQs |
 | `/devils-advocate` | After the spec is written — stress-test the idea |
 | `/literature` | To find related work mentioned during the interview |
-| `/init-project-research` | To scaffold a project once the spec is approved (seeds empty field-calibration) |

@@ -126,5 +126,4 @@ See `skills/shared/council-protocol.md` for the full orchestration protocol.
 | Skill | When to use instead/alongside |
 |-------|-------------------------------|
 | `/interview-me` | To develop the idea further through structured interview |
-| `/multi-perspective` | For multi-perspective analysis with disciplinary diversity |
 | `/proofread` | For language/formatting review rather than argument critique |

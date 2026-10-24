@@ -14,14 +14,14 @@ Build and maintain a `pipeline.md` that maps every script in a research project 
 - When starting a multi-step empirical project (establish the pipeline early)
 - Before sharing code with coauthors (makes the data flow legible)
 - Before submission (ensures the replication package is traceable)
-- After inheriting or reviving old code (pair with `/code-archaeology`)
+- After inheriting or reviving old code
 - When you can't remember which script produces Figure 3
 
 ## When NOT to Use
 
 - Pure theory projects with no empirical pipeline
 - Single-script projects (no pipeline to map)
-- **Code quality review** — use `/code-review` instead (this skill maps structure, not quality)
+- **Code quality review** (this skill maps structure, not quality)
 
 ## Modes
 
@@ -220,7 +220,4 @@ If `pipeline.md` already exists:
 
 ## Cross-References
 
-- **`/code-review`** — Quality review for individual scripts (checks header presence in Category 2: Script Structure)
-- **`/code-archaeology`** — For understanding unfamiliar code before building the manifest
 - **`/pre-submission-report`** — Pipeline manifest helps verify the replication package is complete
-- **`/init-project-research`** — New projects can run `/pipeline-manifest` once scripts exist

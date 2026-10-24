@@ -20,7 +20,7 @@ Compose professional response letters to referee and editor comments. Implements
 
 - Extracting and organizing referee comments from a PDF (use `/process-reviews`)
 - Proofreading the response letter before submission (use `/proofread`)
-- Reviewing someone else's manuscript (use `/peer-review`)
+- Reviewing someone else's manuscript (use the `reviewing-economics-articles` skill in the Dropbox/Referees project)
 - Challenging your own arguments before responding (use `/devils-advocate`)
 
 ## Inputs

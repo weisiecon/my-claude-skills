@@ -34,7 +34,7 @@ argument-hint: [topic-or-paper-query]
 
 ```
 You (orchestrator)
-├── Phase 0: Session log & compact (mandatory — /session-log)
+├── Phase 0: Checkpoint (suggest /compact if the context is already long)
 ├── Phase 1: Pre-search check (direct — no sub-agent)
 ├── Phase 2: Parallel search (2-3 Explore agents)
 ├── Phase 2b: CLI Council search (optional — multi-model recall via cli-council)
@@ -52,9 +52,9 @@ You (orchestrator)
 
 ---
 
-## Phase 0: Session Log & Compact (Mandatory)
+## Phase 0: Checkpoint
 
-Literature searches are context-heavy. **Always** run `/session-log` before starting to create a recovery checkpoint.
+Literature searches are context-heavy. If the conversation is already long, suggest that the user run `/compact` before starting.
 
 ---
 

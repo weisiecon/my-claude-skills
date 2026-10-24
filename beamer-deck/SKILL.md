@@ -1,6 +1,6 @@
 ---
 name: beamer-deck
-description: "Generate academic Beamer presentations with multi-agent review. Builds original themes, applies rhetoric principles, iterates until zero warnings. Triggers: 'make slides', 'create a presentation', 'build a talk'. For web-shareable HTML slides, use /quarto-deck instead."
+description: "Generate academic Beamer presentations with multi-agent review. Builds original themes, applies rhetoric principles, iterates until zero warnings. Triggers: 'make slides', 'create a presentation', 'build a talk'."
 allowed-tools: Bash(latexmk*), Bash(xelatex*), Bash(pdflatex*), Bash(biber*), Bash(bibtex*), Bash(mkdir*), Bash(ls*), Bash(R*), Bash(Rscript*), Bash(python*), Read, Write, Edit, Task
 argument-hint: [topic, content-path, or project-name]
 ---
@@ -12,8 +12,6 @@ argument-hint: [topic, content-path, or project-name]
 ## Purpose
 
 Create polished, zero-warning Beamer decks for academic contexts: seminars, conference talks, teaching lectures, and working decks for coauthors. Every deck gets a custom theme, assertion-driven titles, and parallel review by rhetoric and graphics sub-agents.
-
-**NOT for project status updates** — use `/project-deck` for those.
 
 ## When to Use
 
@@ -185,14 +183,11 @@ project/
 
 | Skill | When to use instead/alongside |
 |-------|-------------------------------|
-| `/project-deck` | For project status updates (supervisor meetings, coauthor handoffs) |
 | `/latex-autofix` | **Default compiler** — used in Phase 3 for error resolution and citation audit |
 | `/latex` | For manual compilation config details, `.latexmkrc` setup, engine selection |
 | `/proofread` | For post-hoc review of text quality in the deck |
 | `/bib-validate` | For thorough bibliography cross-referencing when citations are used |
 | `/literature` | For finding and verifying citations to include |
-| `/quarto-deck` | For HTML presentations (teaching, informal talks) instead of PDF |
-| `/quarto-course` | For full course websites with multiple lectures, exercises, and navigation |
 
 **Scott's full rhetoric essay:** `resources/academics/scott-cunningham/MixtapeTools/presentations/rhetoric_of_decks.md`
 **Scott's deck generation prompt:** `resources/academics/scott-cunningham/MixtapeTools/presentations/create_deck_prompt.md`
