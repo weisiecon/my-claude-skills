@@ -55,6 +55,12 @@ cd ~/.claude/skills && git mv _archive/stata-regression stata-regression
 
 注意：`code-review` 归档后，`/code-review` 对应的是 Claude Code 自带的代码审查命令。如果恢复这个归档版本，它会盖住自带命令。
 
+### 2026-10-25：由官方插件取代
+
+| skill | 原因 |
+|---|---|
+| skill-creator | 这是 55 行的精简版。现已安装 Anthropic 官方插件 `skill-creator@claude-plugins-official`（完整版，带评测脚本）。精简版和插件版同时启用会重复，所以归档精简版 |
+
 另外删除了两个只存在于本机、没有同步到 GitHub 的链接：
 
 - `skills/skills`：指向自身的循环链接，应为误建；

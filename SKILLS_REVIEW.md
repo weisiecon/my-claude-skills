@@ -207,4 +207,9 @@ ECON1102 的 `.claude/skills/pptx/` 是你定制的版本（基于 python-pptx�
 
 经你确认，以上建议已全部执行：启用的 skill 从 68 个（结构修复前）降到 24 个。
 
-现在启用的 24 个：avoid-ai-writing, beamer-deck, bib-validate, devils-advocate, diagram-design, docx, interview-me, latex, latex-autofix, literature, pdf, pipeline-manifest, pptx, pre-submission-report, process-reviews, proofread, python-env, research-ideation, respond-to-referees, session-recap, skill-creator, split-pdf, stata, xlsx。
+2026-10-24 整理后启用 24 个。2026-10-25 又做了三处调整：
+
+- 新增 `audit-code`（审查 Stata do-file）和 `lit-review-verify`（核查引用是否支持论断）。两者改编自 amatray/claude-skills-public，原作者以 MIT 许可发布，每个文件夹里附有 `LICENSE.txt`，`SKILL.md` 末尾写明了修改内容。
+- `skill-creator` 改用 Anthropic 官方插件 `skill-creator@claude-plugins-official`，原来的精简版已归档。
+
+现在启用的 25 个个人 skill：audit-code, avoid-ai-writing, beamer-deck, bib-validate, devils-advocate, diagram-design, docx, interview-me, latex, latex-autofix, lit-review-verify, literature, pdf, pipeline-manifest, pptx, pre-submission-report, process-reviews, proofread, python-env, research-ideation, respond-to-referees, session-recap, split-pdf, stata, xlsx。
