@@ -1,0 +1,7 @@
+interface:
+  display_name: "Research Interview"
+  short_description: "Turn an early research idea into a structured spec"
+  default_prompt: "Use $interview-me to turn my research idea into a structured specification."
+
+policy:
+  allow_implicit_invocation: false
